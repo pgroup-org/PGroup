@@ -1,0 +1,7 @@
+.container .middle form .radio-item:nth-of-type(1) .choice-wrap .per-bar{
+  width: 67%;
+}
+
+.container .middle form .radio-item:nth-of-type(2) .choice-wrap .per-bar{
+  width: 33%;
+}

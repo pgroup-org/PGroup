@@ -1,0 +1,516 @@
+@font-face {
+  font-family: 'CarroisGothicSC-Regular';
+  src: url('../../src/fonts/CarroisGothicSC-Regular.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'AguafinaScript-Regular';
+  src: url('../../src/fonts/AguafinaScript-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: "Janna-LT-Bold";
+  src: url("../../src/fonts/Janna-LT-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Janna-LT-Regular";
+  src: url("../../src/fonts/Janna-LT-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Calligraffitti-Regular";
+  src: url("../../src/fonts/Calligraffitti-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../../src/fonts/Quicksand.ttf") format("truetype");
+}
+
+
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  --lightblue1-clr: #35a8f2;
+  --lightblue2-clr: #007acc;
+  --blue-clr: #0D4159;
+  --darkblue-clr: #0D263C;
+  --yellow-clr: #FFD480;
+  font-family: 'Quicksand';
+}
+
+* {
+  scrollbar-color: var(--blue-clr) rgb(13 65 89 / 25%) !important;
+  scrollbar-width: thin !important;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track-piece,
+*::-webkit-scrollbar-track {
+  background-color: rgb(13 65 89 / 25%);
+}
+*::-webkit-scrollbar-thumb:vertical,
+*::-webkit-scrollbar-thumb {
+  height: 30px;
+  background-color: var(--blue-clr);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #eee;
+  color: var(--blue-clr);
+  position: relative;
+  display: flex;
+  flex-direction: column;  
+  overflow: hidden;
+}
+.container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(../../src/imgs/white-desgin.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.container::before{
+  z-index: 0;
+}
+
+/* .container *{
+  z-index: 1;
+} */
+
+header{
+  width: 100%;
+  height: 40px;
+  background-color: var(--darkblue-clr);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  z-index: 3;
+}
+
+header .logo{
+  width: 15%;
+  display: flex;
+  justify-content: center;
+}
+
+header .logo a{
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+header .logo a h1{
+  font-size: 1.4rem;
+  font-family: AguafinaScript-Regular;
+  font-weight: normal;
+}
+
+header .logo h1:hover{
+  color: var(--yellow-clr);
+}
+
+header .nav-menu{
+  width: 50%;
+  display: flex;
+  /* justify-content: center; */
+}
+
+header .nav-menu li{
+  list-style: none;
+}
+
+header .nav-menu li a{
+  font-size: 1rem;
+  font-family: CarroisGothicSC-Regular;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 20px;
+}
+
+header .nav-menu li a.active,
+header .nav-menu li a:hover{
+  text-decoration: underline;
+  color: var(--yellow-clr);
+}
+
+header .user-profile{
+  direction: rtl;
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header .user-profile a{
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  fill: #fff;
+}
+header .user-profile a#userphoto:hover,
+header .user-profile a#userphoto :hover *{
+  fill: var(--yellow-clr);
+}
+
+/* header .logo,
+header .nav-menu,
+header .user-profile{
+  z-index: 2;
+} */
+
+.user-dialog{
+  width: 200px;
+  height: 250px;
+  background-color: #fff;
+  border: 1px solid var(--blue-clr);
+  border-top: 0px solid transparent;
+  border-radius: 0px 0px 5px 5px;
+  box-shadow: 0px 0px 6px 4px rgb(0 0 0 / 25%);
+  position: absolute;
+  right: 30px;
+  top: -255px;
+  z-index: 2;
+
+  transition: 500ms;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.user-dialog .top{
+  flex-grow: 1;
+  /* border: 1px dashed red; */
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-dialog .top img{
+  height: 100px;
+  border: 1px solid var(--blue-clr);
+  /* outline: 1px solid var(--blue-clr); */
+  /* box-shadow: 0 0 0 2px var(--blue-clr); */
+  border-radius: 50%;
+}
+
+.user-dialog .bottom{
+  height: 80px;
+  /* border: 1px dashed blue; */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-dialog .bottom #log-out{
+  width: fit-content;
+  height: 40px;
+  background: rgb(139,0,0);
+  background: linear-gradient(90deg, rgba(139,0,0,0.25) 0%, rgba(139,0,0,0.15) 50%, rgba(139,0,0,0.25) 100%);
+  border: 1px solid darkred;
+  outline: 0px solid transparent;
+  border-radius: 5px;
+  color: darkred;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0px 35px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  cursor: pointer;
+}
+.user-dialog .bottom #log-out:hover{
+  background: rgb(139,0,0);
+  background: linear-gradient(90deg, rgba(139,0,0,0.8) 0%, rgba(139,0,0,0.6) 50%, rgba(139,0,0,0.8) 100%);
+  font-weight: normal;
+  color: #fff;
+  fill: #fff;
+}
+
+
+main {
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  z-index: 1;
+}
+
+main iframe{  
+  flex-grow: 1;
+  overflow: auto;
+}
+
+main aside {
+  display: flex;
+}
+
+main aside .teams-list{
+  min-width: 60px;
+  flex-grow: 1;
+  background-image: linear-gradient(0deg, rgba(13,65,89,100%) 0%, rgba(13,38,60,100%) 100%);
+  border-right: 1px solid #fff;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  padding: 10px 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+main aside ul li a{
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  fill: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main aside ul li a#aside-add-team:hover{
+  color: var(--yellow-clr);
+  fill: var(--yellow-clr);
+}
+
+main aside ul li a img{
+  width: 42px;
+  height: 42px; 
+  border-radius: 50%; 
+}
+
+main aside ul li a svg{
+  width: 50px;
+  height: 50px;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+main .dialog-bg{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 66%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  padding: 50px;
+  display: none;
+}
+main .dialog-window{
+  width: fit-content;
+  max-width: calc(100% - 50px);
+  height: calc(100% - 50px);
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+main .dialog-window > section {
+  padding: 0px 60px;
+}
+
+main .dialog-window .top{
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .dialog-window > h1.page-title{
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+main .dialog-window .middle{
+  flex-grow: 1;
+  padding: 0px 30px;
+}
+
+main .dialog-window .middle form{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .dialog-window .middle input[type=text]#team-id,
+main .dialog-window .middle input[type=text]#team-name{
+  min-width: 350px;
+  background-color: #fff;
+  outline: 0px solid transparent;
+  border: 1px solid var(--blue-clr);
+  border-radius: 5px;
+  width: 100%;
+  height: 35px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+  color: var(--blue-clr);
+
+  margin-bottom: 10px;
+}
+
+main .dialog-window .middle form textarea{
+  background-color: #fff;
+  outline: 0px solid transparent;
+  border: 1px solid var(--blue-clr);
+  border-radius: 5px;
+  width: 100%;
+  height: min-content;
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+  color: var(--blue-clr);
+}
+main .dialog-window .middle form *::placeholder{
+  color: rgb(13 65 89 / 60%);
+}
+main .dialog-window .middle form .add-vote-choice{
+  width: fit-content;
+  height: 35px;
+  background: rgb(13 65 89 / 15%);
+  /* background: linear-gradient(0deg, rgba(13,38,60,100%) 0%, rgba(13,65,89,100%) 100%); */
+  border: 1px solid var(--blue-clr);
+  outline: 0px solid transparent;
+  border-radius: 5px;
+  color: var(--blue-clr);
+  fill: var(--blue-clr);
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0px 15px 0 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  cursor: pointer;
+}
+
+main .dialog-window .middle form .add-vote-choice:hover{
+  background: rgb(13 65 89 / 25%);
+}
+main .dialog-window .middle form .add-vote-choice svg{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+main .dialog-window .bottom{
+  /* min-height: 100px; */
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+main .dialog-window .bottom button{
+  width: fit-content;
+  height: 40px;
+  background: rgb(13,38,60);
+  background: linear-gradient(90deg, rgba(13,38,60,0.25) 0%, rgba(13,38,60,0.15) 50%, rgba(13,38,60,0.25) 100%);
+  border: 1px solid var(--blue-clr);
+  outline: 0px solid transparent;
+  border-radius: 5px;
+  color: var(--blue-clr);
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0px 35px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  cursor: pointer;
+}
+main .dialog-window .bottom button:hover{
+  background: rgb(13,38,60);
+  background: linear-gradient(90deg, rgba(13,38,60,0.8) 0%, rgba(13,38,60,0.6) 50%, rgba(13,38,60,0.8) 100%);
+  font-weight: normal;
+  color: #fff;
+  fill: #fff;
+}
+main .dialog-window .bottom button#cancel{
+  width: fit-content;
+  height: 40px;
+  background: rgb(200,0,0);
+  background: linear-gradient(90deg, rgba(200,0,0,0.25) 0%, rgba(200,0,0,0.15) 50%, rgba(200,0,0,0.25) 100%);
+  border: 1px solid var(--blue-clr);
+  outline: 0px solid transparent;
+  border-radius: 5px;
+  color: darkred;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0px 35px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  cursor: pointer;
+}
+main .dialog-window .bottom button#cancel:hover{
+  background: rgb(200,0,0);
+  background: linear-gradient(90deg, rgba(200,0,0,0.8) 0%, rgba(200,0,0,0.6) 50%, rgba(200,0,0,0.8) 100%);
+  font-weight: normal;
+  color: #fff;
+  fill: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  height: 40px;
+  background: var(--darkblue-clr);
+  color: #fff;
+  z-index: 2;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+footer a {
+  color: var(--yellow-clr);  
+}

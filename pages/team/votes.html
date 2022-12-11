@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/team/votes.css">
+  <title>Votes</title>
+</head>
+
+<body>
+  <div class="container">
+
+
+
+    <div class="dialog-bg">
+      <div class="dialog-window">
+        <section class="top">
+          <h1 class="page-title">Create new vote</h1>
+        </section>
+        <section class="middle">
+          <form action="">
+            <input type="text" name="" id="vote-title" placeholder="Vote title">
+            <input type="text" name="" id="vote-question" placeholder="Vote question">
+            <ul class="vote-choices">
+              <li class="choice-item">
+                <h3 class="order">2</h3>
+                <input type="text" name="" id="" placeholder="Choice Title">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Information Circle</title><path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M220 220h32v116"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M208 340h88"/><path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z"/></svg>       
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon first-two-choices" viewBox="0 0 512 512"><title>Close Circle</title><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M320 320L192 192M192 320l128-128"/></svg>
+              </li>
+              <li class="choice-item">
+                <h3 class="order">1</h3>
+                <input type="text" name="" id="" placeholder="Choice Title">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Information Circle</title><path d="M248 64C146.39 64 64 146.39 64 248s82.39 184 184 184 184-82.39 184-184S349.61 64 248 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M220 220h32v116"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M208 340h88"/><path d="M248 130a26 26 0 1026 26 26 26 0 00-26-26z"/></svg>        
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon first-two-choices" viewBox="0 0 512 512"><title>Close Circle</title><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M320 320L192 192M192 320l128-128"/></svg>
+              </li>
+            </ul>
+
+            <div class="add-section">
+              <button class="add-vote-choice" id="add-vote-choice" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Add Circle</title><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 176v160M336 256H176"/></svg>
+                <span>Add Choice</span>
+              </button>
+  
+              <p class="note"><strong>Note: The maximum No. of choices is 10</strong></p>
+            </div>
+
+          </form>
+        </section>
+        <section class="bottom">
+          <button id="create">Create</button>      
+          <button id="cancel">Cancel</button>      
+        </section>
+      </div>
+    </div>
+
+
+
+    <h1 class="page-title">Votes</h1>
+    <div class="cont-wrap">
+      <div class="upper-row">
+        <button id="new-vote">
+          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Add Circle</title><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 176v160M336 256H176"/></svg>
+          <span>New Vote</span>
+        </button>
+        <form action="">
+          <input type="text" name="search-field" id="search-field">
+          <label for="submit" id="seach-label">
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Search</title><path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"/></svg>
+            <span>Search</span>            
+          </label>            
+          <input type="submit" id="submit" value="">
+        </form>
+      </div>
+      <ul class="teams-list">
+        <li class="list-item">          
+          <a href="./votes/vote1.html">Vote 1 Title</a>
+        </li>
+        <li class="list-item">        
+          <a href="./votes/vote2.html">Vote 2 Title</a>
+        </li>
+        <li class="list-item">          
+          <a href="./votes/vote3.html">Vote 3 Title</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="../../js/team/votes.js"></script>
+</body>
+
+</html>

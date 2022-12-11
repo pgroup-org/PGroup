@@ -1,0 +1,301 @@
+@font-face {
+  font-family: 'CarroisGothicSC-Regular';
+  src: url('../src/fonts/CarroisGothicSC-Regular.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'AguafinaScript-Regular';
+  src: url('../src/fonts/AguafinaScript-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: "Janna-LT-Bold";
+  src: url("../src/fonts/Janna-LT-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Janna-LT-Regular";
+  src: url("../src/fonts/Janna-LT-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Calligraffitti-Regular";
+  src: url("../src/fonts/Calligraffitti-Regular.ttf") format("truetype");
+}
+
+
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  --lightblue1-clr: #35a8f2;
+  --lightblue2-clr: #007acc;
+  --blue-clr: #0D4159;
+  --darkblue-clr: #0D263C;
+  --yellow-clr: #FFD480;
+  font-family: 'Janna-LT-Regular';
+  font-weight: normal;
+}
+
+* {
+  scrollbar-color: var(--blue-clr) rgb(13 65 89 / 25%) !important;
+  scrollbar-width: thin !important;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track-piece,
+*::-webkit-scrollbar-track {
+  background-color: rgb(13 65 89 / 25%);
+}
+*::-webkit-scrollbar-thumb:vertical,
+*::-webkit-scrollbar-thumb {
+  height: 30px;
+  background-color: var(--blue-clr);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  width: 100%;
+  height: 40px;
+  /* background-color: rgb(13 38 60 / 100%); */
+  background-color: var(--darkblue-clr);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  z-index: 3;
+
+  /* position: fixed; */
+}
+
+header .logo{
+  /* border: 2px dashed yellow; */
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+header .logo a{
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+header .logo a h1{
+  font-family: AguafinaScript-Regular;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+header .logo h1:hover{
+  color: var(--yellow-clr);
+}
+
+header .nav-menu{
+  /* border: 2px dashed yellow; */
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+header .nav-menu li{
+  list-style: none;
+}
+
+header .nav-menu li a{
+  font-size: 1.2rem;
+  font-family: CarroisGothicSC-Regular;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 20px;
+}
+
+header .nav-menu li a.active,
+header .nav-menu li a:hover{
+  text-decoration: underline;
+  color: var(--yellow-clr);
+}
+
+header .socials{
+  /* border: 2px dashed yellow; */
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .socials a{
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+header .socials a:hover,
+header .socials a:hover *{
+  fill: var(--yellow-clr);
+}
+
+main section{  
+  width: inherit;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main section::before{
+  z-index: 0;
+}
+
+main section *{
+  z-index: 1;
+}
+
+main .login{
+  justify-content: center;
+  /* padding-top: 60px; */
+  background-color: #eee;
+  color: var(--blue-clr);
+  position: relative;
+}
+
+main .login::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(../src/imgs/white-desgin.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+main .login form {
+  width: 450px;
+  max-width: 90%;
+  background: linear-gradient(115deg, rgba(13,65,89,15%) 0%, rgba(13,65,89,7.5%) 50%, rgba(13,65,89,15%) 100%);
+  border: 1px solid var(--blue-clr);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 30px;
+} 
+
+main .login form h1{
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+} 
+
+main .login form .input-field{
+  width: 100%;
+  height: 45px; 
+  margin: 3px 0px;  
+  position: relative;
+  display: flex;
+} 
+main .login form input#fname,
+main .login form input#lname,
+main .login form input#username,
+main .login form input#email,
+main .login form input#password,
+main .login form input#confirm{
+  width: inherit;
+  height: inherit;
+  background-color: #fff;
+  border: 1px solid var(--blue-clr);
+  outline: 0px solid transparent;
+  box-shadow: inset 0px 0px 5px 1px rgb(0 0 0 / 25%);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: var(--blue-clr);
+} 
+main .login form input#fname{
+  margin-right: 6px;
+} 
+main .login form input#fname,
+main .login form input#lname{
+  padding: 5px 10px;
+} 
+
+main .login form input#username,
+main .login form input#email{
+  padding: 5px 10px 5px 40px;
+} 
+main .login form input#password,
+main .login form input#confirm{
+  padding: 5px 55px 5px 40px;
+} 
+main .login form .input-field svg{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--blue-clr);
+} 
+main .login form .input-field svg:nth-of-type(1){
+  width: 25px;
+  height: 25px;
+  left: 10px;
+} 
+main .login form .input-field svg:nth-of-type(2){
+  width: 30px;
+  height: 30px;
+  right: 15px;
+} 
+main .login form .form-links{
+  text-align: left;
+  align-self: flex-start;
+} 
+main .login form .form-links,
+main .login form .form-links a{
+  color: var(--blue-clr);
+} 
+
+main .login form .form-links a{
+  font-weight: bold;
+} 
+main .login form input[type=submit]{
+  width: 160px;
+  height: 45px;
+  background: linear-gradient(90deg, rgba(13,65,89,25%) 0%, rgba(13,65,89,15%) 50%, rgba(13,65,89,25%) 100%);
+  border: 1px solid var(--blue-clr);
+  outline: 0px solid transparent;
+  border-radius: 5px;
+  margin: 20px 0px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--blue-clr);
+  cursor: pointer;
+} 
+main .login form input[type=submit]:hover{
+  background: linear-gradient(90deg, rgba(13,65,89,35%) 0%, rgba(13,65,89,25%) 50%, rgba(13,65,89,35%) 100%);
+}
+
+footer {
+  height: 30px;
+  background: var(--darkblue-clr);
+  color: #fff;
+  z-index: 2;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+footer a {
+  color: var(--yellow-clr);  
+}
