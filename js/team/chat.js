@@ -7,7 +7,6 @@ const chatBox = document.getElementById("chatbox");
 var lastMsgNum = chatBox.querySelectorAll(".msg-bubble").length;
 
 attachButton.addEventListener("click", (e)=> {
-  // console.log("Attchment !!!");
   input = document.createElement('input');
   input.type = 'file';
 
@@ -52,8 +51,6 @@ sendButton.addEventListener("click", (e)=> {
 document.addEventListener("keyup", (e)=> {
   if(e.key === "Enter"){
     chatMessageField.value = "";
-    // e.preventDefault();
-    // console.log("Enter Pressed !");
   }
 })
 

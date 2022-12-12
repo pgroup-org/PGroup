@@ -189,38 +189,4 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// // filter / search 
-// document.addEventListener("keyup", (e) => {
-// // document.addEventListener("click", (e) => {
-//   if(e.target.matches("#search-field")){
-//   // if(e.target.matches(".container .cont-wrap .upper-row form input[type=submit]")){
-//     // e.preventDefault();
-//     // if name_input_field is empty after keyup 
-//     // (that means, user deleted the chosen account_item from dropdown_list)
-//     // if(e.target.value === ""){
-//     //   if(e.target.parentElement.parentElement.matches(".acc-row.l1")){
-//     //     deactivateInput(1);
-//     //   } else if(e.target.parentElement.parentElement.matches(".acc-row.l2")){
-//     //     deactivateInput(2);
-//     //   }
-//     // }
-
-//     var input, filter, div, ul, li, a, i;
-//     input = e.target;
-//     // input = document.getElementById("search-field");
-//     filter = input.value.toUpperCase();
-//     ul = document.querySelector(".container .cont-wrap .teams-list");
-//     li = ul.querySelectorAll("li");
-//     for (i = 0; i < li.length; i++) {
-//       var item = li[i].querySelector("h2");
-//       var txtValue = item.textContent || item.innerText;
-//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
-//         li[i].style.display = "";
-//       } else {
-//         li[i].style.display = "none";
-//       }
-//     }
-//   }
-// });
-
 

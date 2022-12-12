@@ -15,7 +15,6 @@ const deleteTaskButton = document.querySelector(".container .dialog4-bg #cancel"
 const cancelDeleteTaskButton = document.querySelector(".container .dialog4-bg #create");
 
 var [target1, target2, target3, arrow, noi, deletePhase, removeTask] = [null, null, null, null, 0, null, null];
-// var label = null;
 
 newPhaseButton.addEventListener("click", (e)=>{
   newPhaseDialog.querySelector("input[type=text]").value = "";
@@ -48,7 +47,6 @@ newPhaseCreateButton.addEventListener("click", (e)=>{
   }
 });
 cancelButton.addEventListener("click", (e)=>{
-  // e.preventDefault();
   newPhaseDialog.style.display = "none";
 });
 
@@ -56,7 +54,6 @@ document.addEventListener("click", (e)=> {
 
   if(e.target.matches("#phase-dropdown")){
     target1 = e.target.parentElement.parentElement.parentElement.querySelector(".bottom");
-    // var display = getComputedStyle(target1).display; 
     var height = getComputedStyle(target1).height; 
     noi = target1.querySelectorAll("form input").length;
     if(height === "0px" && noi !== 0){
@@ -70,7 +67,6 @@ document.addEventListener("click", (e)=> {
     }
   } else if(e.target.matches("#phase-dropdown *")){
     target1 = e.target.parentElement.parentElement.parentElement.parentElement.querySelector(".bottom");
-    // var display = getComputedStyle(target1).display; 
     var height = getComputedStyle(target1).height; 
     noi = target1.querySelectorAll("form input").length;
     if(height === "0px" && noi !== 0){
@@ -85,18 +81,11 @@ document.addEventListener("click", (e)=> {
   }
 
   if(e.target.matches("#add-phase-task")){
-
-    // const newTaskButton = e.target;
     target2 = e.target.parentElement.parentElement.parentElement.querySelector(".bottom");
     target3 = target2.querySelector("form");
-    // var TaskListLen = document.querySelectorAll(".container .cont-wrap .teams-list li").length;
-    // const TaskList = document.querySelector(  ".container .cont-wrap .teams-list");
     arrow = e.target.previousElementSibling;
     noi = target2.querySelectorAll("form input").length + 1;
 
-
-
-    // newTaskButton.addEventListener("click", (e)=>{
     if(noi <= 10){
       newTaskDialog.querySelector("input[type=text]#task-title").value = "";
       newTaskDialog.querySelector("input[type=text]#assignment").value = "";
@@ -106,11 +95,7 @@ document.addEventListener("click", (e)=> {
       newTaskDialog.style.display = "flex";
     } else {
       alert("The maximum no. of tasks per phase has been reached\nThe maximum no. is 10 tasks");
-    }    
-    // });
-    
-
-
+    }
   } 
   else if(e.target.matches("#add-phase-task *")){
     target2 = e.target.parentElement.parentElement.parentElement.parentElement.querySelector(".bottom");
@@ -127,18 +112,6 @@ document.addEventListener("click", (e)=> {
     } else {
       alert("The maximum no. of tasks per phase has been reached\nThe maximum no. is 10 tasks");
     }
-    // var noi = target.querySelectorAll("form input").length + 1;
-    // if(noi <= 10){
-    //   target.style.height = `${(22*noi)+20}px`;
-    //   target.style.border = "1px solid var(--blue-clr)";
-    //   e.target.parentElement.previousElementSibling.style.transform = "rotate(90deg)";
-    //   target2.insertAdjacentHTML("beforeend", `
-    //     <input type="checkbox" id="task3" name="task3" value="Task 3">
-    //     <label for="task3">Task 7 <span class="assign">(assigned to <a href="#">@username</a>)</span></label><br>    
-    //   `)  
-    // } else {
-    //   alert("The maximum no. of tasks per phase has been reached\nThe maximum no. is 10 tasks");
-    // }
   }
 
   if(e.target.matches("#delete-phase")){
@@ -192,22 +165,6 @@ newTaskCreateButton.addEventListener("click", (e)=>{
       `);
       arrow.style.transform = "rotate(90deg)";
 
-
-    // TaskList.insertAdjacentHTML("beforeend", `
-    //   <li class="list-item"> 
-    //     <div class="top">
-    //       <h2>${val}</h2>  
-    //       <div class="btns">
-    //         <svg id="phase-dropdown" xmlns="http://www.w3.org/2000/svg" class="ionicon phase-toggle" viewBox="0 0 512 512"><title>Chevron Forward Circle</title><path d="M48 256c0 114.87 93.13 208 208 208s208-93.13 208-208S370.87 48 256 48 48 141.13 48 256zm257.37 0l-84.68-84.69a16 16 0 0122.62-22.62l96 96a16 16 0 010 22.62l-96 96a16 16 0 01-22.62-22.62z"/></svg>
-    //         <svg id="add-phase-task" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Add Circle</title><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z"/></svg>
-    //       </div>                    
-    //     </div>         
-    //     <div class="bottom">
-    //       <form action="">        
-    //       </form>
-    //     </div> 
-    //   </li>
-    // `);
     newTaskDialog.style.display = "none";
   } else if (val1.length === 0){
     if(val2.length === 0){
@@ -222,7 +179,6 @@ newTaskCreateButton.addEventListener("click", (e)=>{
 });
 
 taskCancelButton.addEventListener("click", (e)=>{
-  // e.preventDefault();
   newTaskDialog.style.display = "none";
 });
 

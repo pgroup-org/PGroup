@@ -1,64 +1,3 @@
-@font-face {
-  font-family: 'CarroisGothicSC-Regular';
-  src: url('../src/fonts/CarroisGothicSC-Regular.ttf')  format('truetype');
-}
-@font-face {
-  font-family: 'AguafinaScript-Regular';
-  src: url('../src/fonts/AguafinaScript-Regular.ttf')  format('truetype');
-}
-
-@font-face {
-  font-family: "Janna-LT-Bold";
-  src: url("../src/fonts/Janna-LT-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Janna-LT-Regular";
-  src: url("../src/fonts/Janna-LT-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Calligraffitti-Regular";
-  src: url("../src/fonts/Calligraffitti-Regular.ttf") format("truetype");
-}
-
-
-*,
-*::before,
-*::after {
-  padding: 0px;
-  margin: 0;
-  font-family: sans-serif;
-  box-sizing: border-box;
-  --lightblue1-clr: #35a8f2;
-  --lightblue2-clr: #007acc;
-  --blue-clr: #0D4159;
-  --darkblue-clr: #0D263C;
-  --yellow-clr: #FFD480;
-  font-family: 'Janna-LT-Regular';
-  font-weight: normal;
-}
-
-* {
-  scrollbar-color: var(--blue-clr) rgb(13 65 89 / 25%) !important;
-  scrollbar-width: thin !important;
-  scroll-behavior: smooth;
-}
-
-*::-webkit-scrollbar {
-  width: 10px;
-}
-
-*::-webkit-scrollbar-track-piece,
-*::-webkit-scrollbar-track {
-  background-color: rgb(13 65 89 / 25%);
-}
-*::-webkit-scrollbar-thumb:vertical,
-*::-webkit-scrollbar-thumb {
-  height: 30px;
-  background-color: var(--blue-clr);
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -75,8 +14,6 @@ header{
   align-items: center;
   border-bottom: 1px solid #fff;
   z-index: 3;
-
-  /* position: fixed; */
 }
 
 header .logo{
@@ -147,13 +84,12 @@ header .socials a:hover *{
 main {  
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  /* height: 100%; */
   height: calc(100vh - 70px);
 }
 
 main section{  
   width: inherit;
-  height: 100vh;
+  height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,7 +105,6 @@ main section *{
 }
 
 main .home{
-  /* display: flex; */
   justify-content: center !important;
   background-image: radial-gradient(circle, rgba(11,55,75,100%) 0%, rgba(13,38,60,100%) 100%);
   color: white;
@@ -189,16 +124,21 @@ main .home::before{
 }
 
 main .home h1{
+  margin-top: -60px;
   font-family: 'Calligraffitti-Regular';
   text-align: center;
   font-size: 4rem;
   font-weight: normal;
 }
+main .home span{
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
 main .home p{
-  font-family: 'Janna-LT-Regular';
+  font-family: 'Quicksand';
   text-align: center;
   font-size: 1.4rem;
-  margin: 30px 0px;
+  margin-bottom: 50px;
 }
 main .home a.login,
 main .home a.register{
@@ -227,7 +167,7 @@ main .home a.register:hover{
 main .about-us,
 main .our-work,
 main .contact-us {
-  padding-top: 20px;
+  padding: 20px 200px 0px;
   background-color: #eee;
   color: var(--blue-clr);
   position: relative;
@@ -263,7 +203,7 @@ main .about-us ul{
 main .about-us ul li{
   display: grid;
   grid-template-columns: repeat(1fr, 4);
-  margin: 10px 30px;
+  margin: 10px 15px;
 }
 main .about-us ul li a{
   display: flex;
@@ -277,8 +217,9 @@ main .about-us ul li a .member-img{
   width: 120px;
   height: 120px;
   background-color: #fff;
-  box-shadow: 0 0 10px 3px rgb(13 65 89 / 70%);
+  box-shadow: 0 0 6px 2px rgb(13 65 89 / 30%);
   border-radius: 50%;
+  margin-bottom: 10px;
   overflow: hidden;
   transition: 200ms;
 }
@@ -295,10 +236,22 @@ main .about-us ul li a .member-img img{
 main .about-us ul li a h4{
   font-weight: bold;
 }
+main .about-us ul li a p{
+  text-align: center;
+}
 
 main .our-work ul{
   width: 100%;
-  padding: 0px 70px;
+  max-height: 65vh;
+  border: 1px solid var(--blue-clr);
+  border-radius: 5px;
+  padding: 10px;
+  flex-grow: 1;
+  display: grid;
+  grid-auto-rows: 60px;
+  gap: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 main .our-work ul li{
   list-style: none;
@@ -312,6 +265,11 @@ main .our-work ul li{
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
+  cursor: pointer;
+}
+
+main .our-work ul li:hover{
+  background: rgb(13 65 89 / 25%);
 }
 main .our-work ul li h4{
   font-weight: bold;
@@ -324,9 +282,6 @@ main .our-work ul li .list-toggle{
   cursor: pointer;
 }
 
-main .contact-us{
-  height: calc(100vh - 60px);
-}
 main .contact-us ul{
   width: 512px;  
   padding: 0px 70px;

@@ -23,11 +23,9 @@ newProjectCreateButton.addEventListener("click", (e)=>{
     newProjectDialog.style.display = "none";
   } else {
     newProjectDialog.querySelector("input[type=text]").style.border = "2px solid red";
-    // newProjectDialog.querySelector("input[type=text]").style.animation = "blink 600ms infinite";
   }
 });
 cancelButton.addEventListener("click", (e)=>{
-  // e.preventDefault();
   newProjectDialog.style.display = "none";
 });
 

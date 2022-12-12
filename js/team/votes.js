@@ -35,7 +35,6 @@ newVoteCreateButton.addEventListener("click", (e)=> {
     item.style.border = "1px solid var(--blue-clr)";
   });  
   if(val1.length !== 0 && val2.length !== 0){
-    // newVoteChoicesListItems = document.querySelectorAll(".container .dialog-bg .middle .vote-choices .choice-item input");
     for(var i = newVoteChoicesListItems.length - 1; i >= 0; i--){
       if(newVoteChoicesListItems[i].value.length === 0){
         newVoteChoicesListItems[i].style.border = "2px solid red";
@@ -48,9 +47,6 @@ newVoteCreateButton.addEventListener("click", (e)=> {
         break;
       }
     }
-    // newVoteChoicesListItems.forEach((item) => {
-    //   item.value.length !== 0 ? allChoicesFilled = true: allChoicesFilled = false;
-    // });
     if(allChoicesFilled){
       voteList.insertAdjacentHTML("beforeend", `
         <li class="list-item">          
@@ -103,7 +99,6 @@ document.addEventListener("click", (e)=> {
     console.log("t parent sibling", e.target.parentElement.nextElementSibling);
 
     if(lastChoice !== null){
-      // lastChoice = lastChoice
       lastChoice.classList.add("last-close");
     }
     --newVoteChoicesListItemsLen;
@@ -117,7 +112,6 @@ document.addEventListener("click", (e)=> {
     console.log("t parent parent sibling", e.target.parentElement.parentElement.nextElementSibling);
 
     if(lastChoice !== null){
-      // lastChoice = lastChoice
       lastChoice.classList.add("last-close");
     }
     --newVoteChoicesListItemsLen;
