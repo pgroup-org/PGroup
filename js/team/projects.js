@@ -2,8 +2,7 @@ const newProjectDialog = document.querySelector(".container .dialog-bg");
 const newProjectButton = document.getElementById("new-project");
 const newProjectCreateButton = document.getElementById("create");
 const cancelButton = document.getElementById("cancel");
-var projectListLen = document.querySelectorAll(".container .cont-wrap .teams-list li").length;
-const projectList = document.querySelector(".container .cont-wrap .teams-list");
+const projectList = document.querySelector(".container .cont-wrap .projects-list");
 
 
 newProjectButton.addEventListener("click", (e)=>{
@@ -17,7 +16,7 @@ newProjectCreateButton.addEventListener("click", (e)=>{
   if(val.length !== 0){
     projectList.insertAdjacentHTML("beforeend", `
       <li class="list-item">          
-        <a href="${'./projects/project.html'}"><strong>Project #${++projectListLen}:</strong>&nbsp;<span>${newProjectDialog.querySelector("input[type=text]").value}</span></a>
+        <a href="${'./projects/project.html'}">${newProjectDialog.querySelector("input[type=text]").value}</a>
       </li>
     `);
     newProjectDialog.style.display = "none";
@@ -36,7 +35,7 @@ document.addEventListener("click", (e) => {
     var input, filter, div, ul, li, a, i;
     input = document.getElementById("search-field");
     filter = input.value.toUpperCase();
-    ul = document.querySelector(".container .cont-wrap .teams-list");
+    ul = document.querySelector(".container .cont-wrap .projects-list");
     li = ul.querySelectorAll("li");
     for (i = 0; i < li.length; i++) {
       var item = li[i].querySelector("a");

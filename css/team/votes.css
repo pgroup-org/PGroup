@@ -374,7 +374,7 @@
   margin: 0 10px;
 }
 
-.container .cont-wrap .teams-list{  
+.container .cont-wrap .votes-list{  
   flex-grow: 1;
   background-color: rgb(13 65 89 / 15%);
   border: 1px solid var(--blue-clr);
@@ -390,7 +390,7 @@
   list-style: none;
 }
 
-.container .cont-wrap .teams-list .list-item{  
+.container .cont-wrap .votes-list .list-item{  
   width: 100%;
   height: 50px;
   background: linear-gradient(90deg, rgba(255,255,255,70%) 0%, rgba(255,255,255,50%) 100%);
@@ -404,7 +404,7 @@
   cursor: pointer;
 }
 
-.container .cont-wrap .teams-list .list-item a{
+.container .cont-wrap .votes-list .list-item a{
   display: block;
   text-decoration: none;
   padding: 10px 30px;
@@ -417,17 +417,17 @@
   display: flex;
   align-items: center;
 }
-.container .cont-wrap .teams-list .list-item a strong{
+.container .cont-wrap .votes-list .list-item a strong{
   font-weight: bold;
 }
 
-.container .cont-wrap .teams-list .list-item:hover{  
+.container .cont-wrap .votes-list .list-item:hover{  
   background: linear-gradient(90deg, rgba(13,65,89,100%) 0%, rgba(13,65,89,20%) 100%);
   color: #fff;
   fill: #fff;
 }
 
-.container .cont-wrap .teams-list svg{  
+.container .cont-wrap .votes-list svg{  
   width: 70px;
   height: 70px;
   margin-right: 10px;

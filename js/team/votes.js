@@ -6,8 +6,8 @@ const addVoteChoiceButton = document.getElementById("add-vote-choice");
 const newVoteChoicesList = document.querySelector(".container .dialog-bg .middle .vote-choices");
 var newVoteChoicesListItems = document.querySelectorAll(".container .dialog-bg .middle .vote-choices .choice-item input");
 var newVoteChoicesListItemsLen = newVoteChoicesListItems.length;
-var voteListLen = document.querySelectorAll(".container .cont-wrap .teams-list li").length;
-const voteList = document.querySelector(".container .cont-wrap .teams-list")
+var voteListLen = document.querySelectorAll(".container .cont-wrap .votes-list li").length;
+const voteList = document.querySelector(".container .cont-wrap .votes-list")
 
 var choicesListcurrentState = newVoteChoicesList.innerHTML;
 
@@ -114,7 +114,7 @@ document.addEventListener("click", (e) => {
     var input, filter, div, ul, li, a, i;
     input = document.getElementById("search-field");
     filter = input.value.toUpperCase();
-    ul = document.querySelector(".container .cont-wrap .teams-list");
+    ul = document.querySelector(".container .cont-wrap .votes-list");
     li = ul.querySelectorAll("li");
     for (i = 0; i < li.length; i++) {
       var item = li[i].querySelector("a");

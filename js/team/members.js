@@ -2,8 +2,8 @@ const newMemberDialog = document.querySelector(".container .dialog-bg");
 const newMemberButton = document.getElementById("new-member");
 const newMemberAddButton = document.querySelector(".container .dialog-bg #add");
 const cancelButton = document.querySelector(".container .dialog-bg #cancel");
-const memberListLen = document.querySelectorAll(".container .cont-wrap .teams-list li").length;
-const memberList = document.querySelector(".container .cont-wrap .teams-list")
+const memberListLen = document.querySelectorAll(".container .cont-wrap .members-list li").length;
+const memberList = document.querySelector(".container .cont-wrap .members-list")
 const rollSelect = newMemberDialog.querySelector(".container .dialog-bg select#roll");
 var membersList = {
   "username": "Fname Lname",
@@ -64,10 +64,10 @@ function member(member){
 }
 
 document.addEventListener("click", (e)=> {
-  if(e.target.matches(".teams-list .list-item #member-edit")){
+  if(e.target.matches(".members-list .list-item #member-edit")){
     memberEdit = e.target.parentElement;
     member(memberEdit);
-  } else if(e.target.matches(".teams-list .list-item #member-edit *")){
+  } else if(e.target.matches(".members-list .list-item #member-edit *")){
     memberEdit = e.target.parentElement.parentElement;
     member(memberEdit);
   }
@@ -150,10 +150,10 @@ document.addEventListener("click", (e)=> {
     }
   }
 
-  if(e.target.matches(".teams-list .list-item #remove-member")){
+  if(e.target.matches(".members-list .list-item #remove-member")){
     memberEdit = e.target.parentElement;
     memberRemoveDialog.style.display = "flex";
-  } else if(e.target.matches(".teams-list .list-item #remove-member *")){
+  } else if(e.target.matches(".members-list .list-item #remove-member *")){
     memberEdit = e.target.parentElement.parentElement;
     memberRemoveDialog.style.display = "flex";
   }
@@ -175,7 +175,7 @@ document.addEventListener("click", (e) => {
     var input, filter, div, ul, li, a, i;
     input = document.getElementById("search-field");
     filter = input.value.toUpperCase();
-    ul = document.querySelector(".container .cont-wrap .teams-list");
+    ul = document.querySelector(".container .cont-wrap .members-list");
     li = ul.querySelectorAll("li");
     for (i = 0; i < li.length; i++) {
       var item = li[i].querySelector("h2");

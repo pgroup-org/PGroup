@@ -315,7 +315,7 @@
   margin: 0 10px;
 }
 
-.container .cont-wrap .teams-list{  
+.container .cont-wrap .phases-list{  
   flex-grow: 1;
   background-color: rgb(13 65 89 / 15%);
   border: 1px solid var(--blue-clr);
@@ -330,7 +330,7 @@
   gap: 5px;
 }
 
-.container .cont-wrap .teams-list .list-item{  
+.container .cont-wrap .phases-list .list-item{  
   width: 100%;
   height: min-content;
   background-color: #fff;
@@ -350,7 +350,7 @@
   user-select: none; /* Standard syntax */
 }
 
-.container .cont-wrap .teams-list .list-item .top{  
+.container .cont-wrap .phases-list .list-item .top{  
   width: inherit;
   height: inherit;
   display: flex;
@@ -358,13 +358,13 @@
   justify-content: space-between;
   position: relative;
 }
-.container .cont-wrap .teams-list .list-item .top .btns{  
+.container .cont-wrap .phases-list .list-item .top .btns{  
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.container .cont-wrap .teams-list .list-item .bottom{  
+.container .cont-wrap .phases-list .list-item .bottom{  
   width: 100%;
   height: 0px;
   display: flex;
@@ -374,7 +374,7 @@
   transition: all 500ms;
 }
 
-.container .cont-wrap .teams-list .list-item .bottom form{  
+.container .cont-wrap .phases-list .list-item .bottom form{  
   padding: 10px;
   width: 100%;
   display: flex;
@@ -382,7 +382,7 @@
   flex-direction: column;
 }
 
-.container .cont-wrap .teams-list .list-item .bottom form .task-item{  
+.container .cont-wrap .phases-list .list-item .bottom form .task-item{  
   width: 100%;
   height: 22px;
   display: flex;
@@ -396,56 +396,56 @@
   user-select: none; /* Standard syntax */
 }
 
-.container .cont-wrap .teams-list .list-item .bottom form .task-item:hover{  
+.container .cont-wrap .phases-list .list-item .bottom form .task-item:hover{  
   background-color: rgb(13 38 60 / 15%);
 }
 
-.container .cont-wrap .teams-list .list-item .bottom form .task-item label{ 
+.container .cont-wrap .phases-list .list-item .bottom form .task-item label{ 
   width: 100%; 
   margin-left: 5px;
   cursor: pointer;
 }
 
-.container .cont-wrap .teams-list .list-item .bottom form .task-item label .assign{  
+.container .cont-wrap .phases-list .list-item .bottom form .task-item label .assign{  
   margin-left: 5px;
   color: orangered;
 }
 
-.container .cont-wrap .teams-list .list-item .bottom form .task-item svg#remove-task{  
+.container .cont-wrap .phases-list .list-item .bottom form .task-item svg#remove-task{  
   width: 22px;
   height: 22px;
   margin-left: auto;
   color: darkred;
   fill: darkred;
 }
-.container .cont-wrap .teams-list .list-item .bottom form .task-item svg#remove-task:hover{  
+.container .cont-wrap .phases-list .list-item .bottom form .task-item svg#remove-task:hover{  
   color: red;
   fill: red;
 }
 
-.container .cont-wrap .teams-list .list-item h2{
+.container .cont-wrap .phases-list .list-item h2{
   font-size: 1.3rem;
 }
-.container .cont-wrap .teams-list .list-item h2 strong{
+.container .cont-wrap .phases-list .list-item h2 strong{
   font-weight: bold;
 }
 
-.container .cont-wrap .teams-list svg{  
+.container .cont-wrap .phases-list svg{  
   width: 30px;
   height: 30px;
   margin: 0px;
   cursor: pointer;
 }
-.container .cont-wrap .teams-list svg#phase-dropdown{  
+.container .cont-wrap .phases-list svg#phase-dropdown{  
   transform: rotate(0deg);
   transition: 200ms ease;
 }
-.container .cont-wrap .teams-list svg#delete-phase{  
+.container .cont-wrap .phases-list svg#delete-phase{  
   transform: rotate(0deg);
   color: darkred;
   fill: darkred;
 }
-.container .cont-wrap .teams-list svg#delete-phase:hover{  
+.container .cont-wrap .phases-list svg#delete-phase:hover{  
   color: red;
   fill: red;
 }

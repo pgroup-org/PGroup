@@ -35,42 +35,6 @@
   display: flex;
 }
 
- aside .teams-list{
-  min-width: 60px;
-  flex-grow: 1;
-  background-image: linear-gradient(0deg, rgba(13,65,89,100%) 0%, rgba(13,38,60,100%) 100%);
-  border-right: 1px solid #fff;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
-  padding: 10px 0px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
- aside .teams-list li a{
-  width: 50px;
-  height: 50px;
-  color: #fff;
-  fill: #fff;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
- aside .teams-list li a#add:hover{
-  color: var(--yellow-clr);
-  fill: var(--yellow-clr);
-}
-
- aside .teams-list li a svg{
-  width: 50px;
-  height: 50px;  
-}
-
-
  aside .aside{
   min-width: 180px;
   background-image: linear-gradient(0deg, rgba(13,65,89,100%) 0%, rgba(13,38,60,100%) 100%);
