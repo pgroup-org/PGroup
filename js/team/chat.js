@@ -13,22 +13,22 @@ attachButton.addEventListener("click", (e)=> {
   input.addEventListener("change", (e)=> {
     file = e.target.files[0]; 
   
-    if(file !== null){ // display file information
-      console.log(file.name);
+    // if(file !== null){ // display file information
+    //   console.log(file.name);
 
-      var size = (file.size / 1024).toFixed(2);
-      var sizeLen = size.length - 3;
-      if(sizeLen <= 3){
-        console.log(`${Number(size)} KB`);
-      } else if(sizeLen > 3 && sizeLen <= 6){
-        console.log(`${Number(size / 1024).toFixed(2)} MB`);
-      } else if(sizeLen > 6 && sizeLen <= 9){
-        console.log(`${Number(size / 1024).toFixed(2)} GB`);
-      } else {
-        console.log(`file is too big`);
-      }
-      console.log(file.type);
-    }
+    //   var size = (file.size / 1024).toFixed(2);
+    //   var sizeLen = size.length - 3;
+    //   if(sizeLen <= 3){
+    //     console.log(`${Number(size)} KB`);
+    //   } else if(sizeLen > 3 && sizeLen <= 6){
+    //     console.log(`${Number(size / 1024).toFixed(2)} MB`);
+    //   } else if(sizeLen > 6 && sizeLen <= 9){
+    //     console.log(`${Number(size / 1024).toFixed(2)} GB`);
+    //   } else {
+    //     console.log(`file is too big`);
+    //   }
+    //   console.log(file.type);
+    // }
   });
   
   input.click();

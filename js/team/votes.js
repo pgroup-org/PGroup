@@ -91,13 +91,7 @@ addVoteChoiceButton.addEventListener("click", (e)=> {
 
 document.addEventListener("click", (e)=> {
   if(e.target.matches(".container .dialog-bg .middle .vote-choices .choice-item svg.last-close")){
-
     var lastChoice = e.target.parentElement.nextElementSibling.querySelector("svg.remove-choice");
-
-    console.log("target", e.target);
-    console.log("t parent", e.target.parentElement);
-    console.log("t parent sibling", e.target.parentElement.nextElementSibling);
-
     if(lastChoice !== null){
       lastChoice.classList.add("last-close");
     }
@@ -105,12 +99,6 @@ document.addEventListener("click", (e)=> {
     e.target.parentElement.remove();
   } else if(e.target.matches(".container .dialog-bg .middle .vote-choices .choice-item svg.last-close *")){
     var lastChoice = e.target.parentElement.parentElement.nextElementSibling.querySelector("svg.remove-choice");
-
-    console.log("target", e.target);
-    console.log("t parent", e.target.parentElement);
-    console.log("t parent parent", e.target.parentElement.parentElement);
-    console.log("t parent parent sibling", e.target.parentElement.parentElement.nextElementSibling);
-
     if(lastChoice !== null){
       lastChoice.classList.add("last-close");
     }
