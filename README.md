@@ -4,7 +4,7 @@
 
 PGroup or Project Group: is an open source web application that has been built as portfolio for our team:
 
-* Team page: [Project Group (pgroup722)]([pgroup722 (Project Group) · GitHub](https://github.com/pgroup722))  
+* Team page: [Project Group (pgroup722)](https://github.com/pgroup722)  
 
 * Team organization page: [Project Group Oganization](https://github.com/pgroup-org)
 
@@ -13,8 +13,6 @@ The application has features that help relativly small teams and groups to organ
 The workflow of the website is very simple, where the admin user create an account, as well as all the team members. The admin can create a team and invite others to join the team (where a team most have at least one owner). The team can create projects, assign tasks, set reminders, chat, and share content with others. 
 
 **Note:** The application is yet in the experimental stage.
-
-
 
 ### Phatures
 
@@ -27,8 +25,6 @@ The workflow of the website is very simple, where the admin user create an accou
 - Create projects
 - Create tasks and assign it to a specfic member
 - Create votes
-  
-  
 
 ## Authors
 
@@ -40,8 +36,6 @@ The workflow of the website is very simple, where the admin user create an accou
 - [Adinterm Prador/Raven - Adinterm](https://github.com/Adinterm)
 - Lanse
 - Minwa Betley
-  
-  
 
 ### LICENSE
 
