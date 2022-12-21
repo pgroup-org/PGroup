@@ -26,16 +26,16 @@
   z-index: 1;
 }
 
- iframe{  
+iframe{  
   flex-grow: 1;
   overflow: auto;
 }
 
- aside {
+aside {
   display: flex;
 }
 
- aside .aside{
+aside .aside{
   min-width: 180px;
   background-image: linear-gradient(0deg, rgba(13,65,89,100%) 0%, rgba(13,38,60,100%) 100%);
   color: #fff;
@@ -44,7 +44,7 @@
   flex-direction: column;
 }
 
- .aside::before {
+.aside::before {
   content: '';
   width: 100%;
   height: 100%;
@@ -57,23 +57,23 @@
   left: 0;
   opacity: 50%;
 }
- .aside section{
+.aside section{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
- .aside::before{
+.aside::before{
   z-index: 1;
 }
- .aside *{
+.aside *{
   z-index: 2;
 }
- .aside .user{
+.aside .user{
   height: 200px;
   justify-content: flex-end;
 }
- .aside .user .user-img{
+.aside .user .user-img{
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -83,44 +83,44 @@
   align-items: center;
   margin-bottom: 10px;
 }
- .aside .user .user-img img{
+.aside .user .user-img img{
   width: 100%;
   height: 100%;
 }
- .aside .user .user-img svg{
+.aside .user .user-img svg{
   width: 100%;
   height: 100%;
   fill: #fff;
 }
- .aside .user h1.fullname{
+.aside .user h1.fullname{
   line-height: 1rem;
   font-size: 1.2rem;
 }
- .aside .user a.username{
+.aside .user a.username{
   font-size: 1.2rem;
   text-decoration: none;
   color: var(--yellow-clr);
 }
- .aside .user a.username:hover{
+.aside .user a.username:hover{
   text-decoration: underline;
 }
- .aside .menu{
+.aside .menu{
   flex-grow: 1;
   padding: 30px 0px;
   justify-content: flex-start;
   overflow: auto;
 }
- .aside .menu .side-menu{
+.aside .menu .side-menu{
   width: 100%;
   list-style: none;
   padding: 0 10px;
   display: grid;
   gap: 5px;
 }
- .aside .menu .side-menu li{
+.aside .menu .side-menu li{
   height: 30px;
 }
- .aside .menu .side-menu li a{
+.aside .menu .side-menu li a{
   display: flex;
   align-items: center;
   min-width: 100%;
@@ -133,15 +133,15 @@
   border: 1px solid #fff;
   border-radius: 5px;
 }
- .aside .menu .side-menu li a:hover{
+.aside .menu .side-menu li a:hover{
   background-color: rgb(255 255 255 / 25%);
 }
- .aside .menu .side-menu li a.active{
+.aside .menu .side-menu li a.active{
   background-color: #fff;
   color: var(--blue-clr);
   fill: var(--blue-clr);
 }
- .aside .menu .side-menu li a svg{
+.aside .menu .side-menu li a svg{
   width: 20px;
   height: 20px;
   margin-right: 10px;
